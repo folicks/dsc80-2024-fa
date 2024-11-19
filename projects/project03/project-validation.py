@@ -42,7 +42,10 @@ if 'q1' in questions or questions == [] or 'all' in questions:
 # don't change this cell, but do run it -- it is needed for the tests
 import time
 start = time.time()
-shakes = tokenize(open(Path('data') / 'shakespeare.txt').read())
+# shakes = tokenize(open(Path('data') / 'shakespeare.txt').read())
+# may need this to run on terminal
+shakes = tokenize(open(Path('data') / 'shakespeare.txt',encoding="UTF-8").read())
+
 elapsed = time.time() - start
 elapsed # Should be (much) under 5
 
